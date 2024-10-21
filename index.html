@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Girlfriend?</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #E6E6FA; /* Lavender background */
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #8B008B; /* Darker purple for the text */
+        }
+
+        /* The Yes/Yes Options */
+        .options {
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 1.5rem;
+            color: #8B008B;
+            margin-right: 10px;
+        }
+
+        .options input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Bouncing hearts */
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #FF69B4; /* Pink hearts */
+            transform: rotate(45deg);
+            animation: bounce 4s infinite ease-in-out;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #FF69B4;
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 10px;
+            top: 0;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0) rotate(45deg);
+            }
+            50% {
+                transform: translateY(-200px) rotate(45deg);
+            }
+        }
+
+        /* Randomly place the hearts */
+        .heart:nth-child(1) {
+            top: 10%;
+            left: 20%;
+            animation-duration: 5s;
+            animation-delay: 0s;
+        }
+        .heart:nth-child(2) {
+            top: 20%;
+            left: 50%;
+            animation-duration: 7s;
+            animation-delay: 1s;
+        }
+        .heart:nth-child(3) {
+            top: 50%;
+            left: 80%;
+            animation-duration: 6s;
+            animation-delay: 0.5s;
+        }
+        .heart:nth-child(4) {
+            top: 40%;
+            left: 10%;
+            animation-duration: 8s;
+            animation-delay: 0s;
+        }
+        .heart:nth-child(5) {
+            top: 60%;
+            left: 40%;
+            animation-duration: 5.5s;
+            animation-delay: 2s;
+        }
+        .heart:nth-child(6) {
+            top: 70%;
+            left: 60%;
+            animation-duration: 9s;
+            animation-delay: 0.7s;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Will You Be My Girlfriend?</h1>
+
+        <div class="options">
+            <label for="yes1">Yes</label>
+            <input type="checkbox" id="yes1">
+
+            <label for="yes2">Yes</label>
+            <input type="checkbox" id="yes2">
+        </div>
+    </div>
+
+    <!-- Many bouncing hearts in the background -->
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+
+</body>
+</html>
